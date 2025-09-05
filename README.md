@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # FitMantra
 
@@ -24,3 +25,6 @@ Open `Frontend/index.html` in your browser (or serve via VSCode Live Server).
 
 - **Backend**: Render/Railway/Heroku (uses `Procfile`).
 - **Frontend**: GitHub Pages/Netlify/Vercel. Update `BASE_URL` in `Frontend/script.js` to your backend URL.
+=======
+# FitMantra
+>>>>>>> d4ca98c4604dfc8c38968ee9e372668733693a91

@@ -1,6 +1,6 @@
 
 // ====== CONFIG ======
-const BASE_URL = localStorage.getItem('fitmantra_api') || 'http://127.0.0.1:5000';
+const BASE_URL = localStorage.getItem('fitmantra_api') || 'https://your-backend-on-render.onrender.com';
 
 // Helpers
 const qs = s => document.querySelector(s);

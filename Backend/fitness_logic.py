@@ -1,14 +1,20 @@
-
 import os
 import pandas as pd
 
 def get_fitness_plan():
-    # Expect dataset/Weekly_Workouts.csv at project root
+    # Locate the dataset folder correctly
     project_root = os.path.dirname(os.path.dirname(__file__))
     csv_path = os.path.join(project_root, "dataset", "Weekly_Workouts.csv")
+
     if not os.path.exists(csv_path):
-        raise FileNotFoundError(csv_path)
-    df = pd.read_csv(csv_path)
-    # Normalize column names if needed
+        raise FileNotFoundError(f"{csv_path} not found!")
+
+    # Read the CSV safely
+    df = pd.read_csv(csv_path, quotechar='"')
+
+
+    # Normalize column names (optional but clean)
     df.columns = [c.strip().title() for c in df.columns]
+
+    # Return as JSON-like dict
     return df.to_dict(orient="records")
