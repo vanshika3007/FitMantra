@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitMantra | Fitness Progress Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="brand">💪 FitMantra</div>
+    <ul class="links">
+      <li><a href="#chatbot">Chatbot</a></li>
+      <li><a href="#plan">Workout Plan</a></li>
+      <li><a href="#progress">Progress</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Your Fitness Journey Starts Here</h1>
+    <p>Track workouts, chat with your AI coach, and visualize progress.</p>
+    <button id="startBtn">Start Now</button>
+  </header>
+
+  <main>
+    <section id="chatbot" class="card">
+      <h2>🤖 FitMantra Coach</h2>
+      <div id="chat-window" class="chat-window"></div>
+      <div class="chat-controls">
+        <input type="text" id="user-input" placeholder="Ask about workouts, diet, recovery..." />
+        <button id="sendBtn">Send</button>
+      </div>
+    </section>
+
+    <section id="plan" class="card">
+      <h2>📅 Weekly Workout Plan</h2>
+      <button id="loadPlanBtn">Load Plan</button>
+      <div id="plan-container" class="plan-grid"></div>
+    </section>
+
+    <section id="progress" class="card">
+      <h2>📊 Track Your Progress</h2>
+      <form id="progress-form" class="progress-form">
+        <input type="text" id="user" placeholder="Your Name" required />
+        <input type="text" id="workout" placeholder="Workout Done" required />
+        <input type="date" id="date" required />
+        <button type="submit">Save Progress</button>
+      </form>
+      <p id="progress-message" class="muted"></p>
+      <div class="table-wrap">
+        <table id="progress-table">
+          <thead><tr><th>User</th><th>Workout</th><th>Date</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 FitMantra • Stay Strong</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
